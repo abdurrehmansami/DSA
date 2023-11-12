@@ -7,7 +7,10 @@ class myArray
 {
     int total_size;
     int used_size;
-    int *ptr;
+    int *ptr; //stores address of first elemnt
+    // This is a dynamic memory allocation operation. It's used to allocate
+    //  memory for an array of integers with a size specified by Tsize.
+    //  In other words, it allocates memory for an integer array with Tsize elements.
 
 public:
     myArray(int Tsize, int Usize)

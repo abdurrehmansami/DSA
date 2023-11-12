@@ -1,0 +1,26 @@
+ADT is a model to make a DS
+ADT = SET OF VAL + SET OF OPERATIONS
+jese pc ko bnane k lie i want a ram , memory card etc.
+It has minimal reuirements and operations 
+so adt is a custom dt jisme hm apni mrzi se fn aur val rkhte hain
+Abstrat dt: hiding details
+ARRAY AS ADT 
+array size cant be updated bcz of contigous mem location. bad me size brhana hua to 
+contigous location dena zruri hai jo occupy ho chuki hogi
+Fast retrieval/access O(1) and updation 
+https://www.codewithharry.com/videos/data-structures-and-algorithms-in-hindi-6/
+
+TC IN ARRAY:
+INSERTION:
+best case(end me insert): O(1)
+worst case(start me insert): O(N) -> sbko agay khiskana prega
+
+DELETION: 
+best case(end me del): O(1)
+worst case(start me del): O(N) -> sbko agay khiskana prega
+
+SEARCH:
+
+LINKED LIST:
+
+

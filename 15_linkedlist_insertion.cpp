@@ -23,14 +23,16 @@ void traversal(Node *head)
 }
 Node *insertAtFirst(Node *head, int data)
 {
-    Node *ptr = new Node();
-    ptr->next = head;
-    ptr->data = data;
-    return ptr;
+    Node *newNode = new Node();
+    newNode->next = head;
+    newNode->data = data;
+    return newNode;
 }
 Node *insertAtIndex(Node *head, int data, int index)
+// index 4 pe insert krne k lie ham head se etraverse krakr 3 tk jaenge
+// phir hm bolenge k p (3) ->next new node hoga aur new node -> next p ->next hoga qk new node ab beeech me aya hai
 {
-    Node *ptr = new Node();
+    Node *newNode = new Node();
     Node *p = head;
     int i = 0;
     while (i != index - 1)
@@ -38,15 +40,15 @@ Node *insertAtIndex(Node *head, int data, int index)
         p = p->next;
         i++;
     }
-    ptr->data = data;
-    ptr->next = p->next;
-    p->next = ptr;
- 
+    newNode->data = data;
+    newNode->next = p->next;
+    p->next = newNode;
+
     return head;
 }
 Node *insertAtEnd(Node *head, int data)
 {
-    Node *ptr = new Node();
+    Node *newNode = new Node();
     Node *p = head;
     int i = 0;
     while (p->next != NULL)
@@ -54,9 +56,9 @@ Node *insertAtEnd(Node *head, int data)
         p = p->next;
         i++;
     }
-    ptr->data = data;
-    ptr->next = p->next;
-    p->next = ptr;
+    newNode->data = data;
+    newNode->next = p->next;
+    p->next = newNode;
 
     return head;
 }
@@ -79,9 +81,9 @@ int main()
 
     head = insertAtFirst(head, 56);
     head = insertAtIndex(head, 99, 2);
-    head= insertAtEnd(head,22);
+    head = insertAtEnd(head, 22);
 
-    cout<<"link list before deletion"<<endl;
+    cout << "link list before deletion" << endl;
     traversal(head);
 
     // Cleaning up the memory (freeing the nodes)
