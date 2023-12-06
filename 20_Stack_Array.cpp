@@ -30,8 +30,8 @@ int main()
 {
     int stackSize = 80;
     Stack *s = new Stack(stackSize);
-    // s->arr[0] = 7;
-    // s->top++;
+    s->arr[0] = 7;
+    s->top++;
 
     // Check if stack is empty
     if (s->isEmpty())
